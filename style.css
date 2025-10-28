@@ -1,0 +1,216 @@
+/* ======== PENGATURAN GLOBAL ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Membuat scroll lebih mulus saat mengklik link navigasi */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff; /* Warna link biru */
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 60px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ======== HEADER & NAVIGASI ======== */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  /* Membuat navigasi tetap di atas saat di-scroll */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between; /* Logo di kiri, link di kanan */
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  margin-left: 20px;
+}
+
+header ul li a {
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #007bff; /* Warna biru saat hover */
+}
+
+/* ======== BAGIAN HERO ======== */
+.hero {
+  background-color: #e9ecef;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* ======== BAGIAN TENTANG SAYA ======== */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Jarak antara gambar dan teks */
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  object-fit: cover; /* Memastikan gambar tidak penyok */
+  border: 3px solid #ddd;
+}
+
+.about-content p {
+  flex: 1; /* Mengisi sisa ruang */
+}
+
+/* ======== BAGIAN PROYEK ======== */
+.project-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  max-width: 320px; /* <-- TAMBAHKAN BARIS INI */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Efek sedikit terangkat saat hover */
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3,
+.project-card p,
+.project-card a {
+  padding: 0 20px; /* Padding untuk teks di dalam kartu */
+}
+
+.project-card h3 {
+  padding-top: 20px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* ======== BAGIAN KONTAK ======== */
+#contact {
+  background-color: #e9ecef;
+  text-align: center;
+}
+
+#contact ul {
+  margin-top: 20px;
+}
+
+#contact ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* ======== RESPONSIVE (Untuk Layar HP) ======== */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column; /* Ubah navigasi jadi vertikal */
+    gap: 15px;
+  }
+
+  .about-content {
+    flex-direction: column; /* Tumpuk gambar dan teks */
+    text-align: center;
+  }
+}
